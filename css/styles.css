@@ -11,10 +11,9 @@
   --accent-color: #2196f3;
 }
 
-/* В body только font-family - color & letter spacing & background везде добавить */
-
 body {
   font-family: Roboto, sans-serif;
+  color: var(--primary-text-color);
 }
 
 .list {
@@ -25,9 +24,18 @@ body {
   text-decoration: none;
 }
 
-.link:hover,
-.link:focus {
-  color: var(--accent-color);
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /* Шапка сайта */
@@ -65,6 +73,17 @@ body {
   color: var(--secondary-text-color);
 }
 
+.header-nav-list .link:hover,
+.header-nav-list .link:focus,
+.header-contact-list .link:hover,
+.header-contact-list .link:focus {
+  color: var(--accent-color);
+}
+/* Обычно так не делается, обещали позже научить */
+.current {
+  color: var(--accent-color);
+}
+
 /* Герой */
 .hero {
   background-color: var(--primary-background-color);
@@ -89,6 +108,7 @@ body {
   letter-spacing: 0.06em;
   color: var(--primary-white-color);
   background: var(--accent-color);
+  cursor: pointer;
 }
 
 .hero-btn:hover,
@@ -106,7 +126,6 @@ body {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--primary-text-color);
 }
 
 .benefits-desc {
@@ -115,6 +134,7 @@ body {
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
 }
+
 /* Рабочие процессы */
 .process {
   background-color: var(--primary-white-color);
@@ -125,8 +145,8 @@ body {
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--primary-text-color);
 }
+
 /* Команда */
 .team {
   background-color: var(--secondary-background-color);
@@ -137,7 +157,6 @@ body {
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--primary-text-color);
 }
 
 .team-name {
@@ -146,7 +165,6 @@ body {
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--primary-text-color);
 }
 
 .team-position {
@@ -168,29 +186,29 @@ body {
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--primary-text-color)
-  background: var(--secondary-background-color);
+  background-color: var(--secondary-background-color);
+  cursor: pointer;
 }
 
-.works-sort-btn:active {
+.works-sort-btn:active,
+.works-sort-btn:hover,
+.works-sort-btn:focus {
   color: var(--primary-white-color);
   background: var(--accent-color);
 }
 
 .works-title {
-font-size: 18px;
-line-height: 2;
-letter-spacing: 0.06em;
-color: var(--primary-text-color);
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--primary-text-color);
 }
 
 .works-desc {
-font-size: 16px;
-line-height: 1.87;
-letter-spacing: 0.03em;
-color: var(--secondary-text-color);
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
 }
-
 
 /* Подвал сайта */
 .footer {
@@ -225,4 +243,9 @@ color: var(--secondary-text-color);
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-address .link:hover,
+.footer-address .link:focus {
+  color: var(--accent-color);
 }
