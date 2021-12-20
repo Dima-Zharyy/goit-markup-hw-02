@@ -1,3 +1,8 @@
+/* Надо задавать только для верстки чтобы визуально видеть размеры блока, ставится для каждого элемента который хочется визуально увидеть
+body {
+  outline: 2px solid rgb(0, 253, 253);
+} */
+
 /* Глобальные свойства */
 :root {
   --logo-color: #2196f3;
@@ -175,11 +180,11 @@ body {
 }
 
 /* Портфолио - Работы */
-.works {
+.section {
   background-color: var(--primary-white-color);
 }
 
-.works-sort-btn {
+.filter-btn {
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -190,21 +195,21 @@ body {
   cursor: pointer;
 }
 
-.works-sort-btn:active,
-.works-sort-btn:hover,
-.works-sort-btn:focus {
+.filter-btn:active,
+.filter-btn:hover,
+.filter-btn:focus {
   color: var(--primary-white-color);
   background: var(--accent-color);
 }
 
-.works-title {
+.gallery-title {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--primary-text-color);
 }
 
-.works-desc {
+.gallery-desc {
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
